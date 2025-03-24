@@ -1,7 +1,9 @@
-import {createServer} from "node:http"
+import { createServer } from "node:http";
 
- const server = createServer(() => {
-    console.log("Hello world!")
- })
+const server = createServer((request, response) => {
+  response.write("Response");
 
- server.listen(3333)
+  return response.end();
+});
+
+server.listen(3333);
