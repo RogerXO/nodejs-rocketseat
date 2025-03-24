@@ -11,19 +11,36 @@
 
 // CREATING SERVER WITH FASTIFY
 import { fastify } from "fastify";
+import { DataBaseMemory } from "./database-memory.js";
 
 const server = fastify();
 
-server.get("/", () => {
-  return "Hello World";
+const database = new DataBaseMemory();
+
+// POST localhost:3333/videos
+server.post("/videos", (request, reply) => {
+  const { title, description, duration } = request.body;
+
+  database.create({
+    //short sintax
+    title,
+    description,
+    duration,
+  });
+
+  return reply.status(201).send();
 });
 
-server.get("/node", () => {
-  return "Hello Node";
+server.get("/videos", () => {
+  return "get videos";
 });
 
-server.get("/hello", () => {
-  return "Hello User";
+server.put("/videos/:id", () => {
+  return "put videos";
+});
+
+server.delete("/videos/:id", () => {
+  return "delete video";
 });
 
 server.listen({
