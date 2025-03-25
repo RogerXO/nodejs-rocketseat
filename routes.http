@@ -1,8 +1,9 @@
 POST http://localhost:3333/videos
 content-type: application/json
 
+//REQUEST BODY
 {
-    "title": "Video 01",
+    "title": "First Video 01",
     "description": "This is the first video",
     "duration": 180
 }
@@ -11,9 +12,14 @@ content-type: application/json
 
 GET http://localhost:3333/videos
 
+###
+
+// QUERY PARAMETERS / SEARCH PARAMETERS
+GET http://localhost:3333/videos?search=first
 
 ###
 
+//ROUTE PARAMETERS
 PUT http://localhost:3333/videos/43f9cbb3-e56e-4a6a-91d1-3e460f241b6f
 Content-Type: application/json
 
