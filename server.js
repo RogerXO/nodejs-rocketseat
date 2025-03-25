@@ -31,12 +31,21 @@ server.post("/videos", (request, reply) => {
   return reply.status(201).send();
 });
 
-server.get("/videos", () => {
-  return "get videos";
+server.get("/videos", (request, reply) => {
+  const videos = database.list();
+
+  return reply.send({ videos: videos });
+  // return videos -- this is another way
 });
 
-server.put("/videos/:id", () => {
-  return "put videos";
+server.put("/videos/:id", (request, reply) => {
+  const videoId = request.params.id;
+  const video = request.body;
+
+  database.update(videoId, video);
+  // database.update(videoId, {...video});
+
+  return reply.status(204).send();
 });
 
 server.delete("/videos/:id", () => {
