@@ -1,4 +1,4 @@
-POST http://localhost:3333/videos
+POST https://nodejs-rocketseat-7law.onrender.com/videos
 content-type: application/json
 
 //REQUEST BODY
@@ -10,17 +10,17 @@ content-type: application/json
 
 ###
 
-GET http://localhost:3333/videos
+GET https://nodejs-rocketseat-7law.onrender.com/videos
 
 ###
 
 // QUERY PARAMETERS / SEARCH PARAMETERS
-GET http://localhost:3333/videos?search=first
+GET https://nodejs-rocketseat-7law.onrender.com/videos?search=first
 
 ###
 
 //ROUTE PARAMETERS
-PUT http://localhost:3333/videos/55140c3f-8013-464d-a6f5-a98dda660640
+PUT https://nodejs-rocketseat-7law.onrender.com/videos/72f64a6a-ed4d-45cd-a1cd-78b1a8f25627
 Content-Type: application/json
 
 {
@@ -31,4 +31,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/videos/55140c3f-8013-464d-a6f5-a98dda660640
+DELETE https://nodejs-rocketseat-7law.onrender.com/videos/72f64a6a-ed4d-45cd-a1cd-78b1a8f25627
