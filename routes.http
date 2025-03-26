@@ -20,7 +20,7 @@ GET http://localhost:3333/videos?search=first
 ###
 
 //ROUTE PARAMETERS
-PUT http://localhost:3333/videos/43f9cbb3-e56e-4a6a-91d1-3e460f241b6f
+PUT http://localhost:3333/videos/55140c3f-8013-464d-a6f5-a98dda660640
 Content-Type: application/json
 
 {
@@ -31,4 +31,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/videos/43f9cbb3-e56e-4a6a-91d1-3e460f241b6f
+DELETE http://localhost:3333/videos/55140c3f-8013-464d-a6f5-a98dda660640
